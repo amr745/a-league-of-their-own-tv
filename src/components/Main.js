@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { Routes, Route } from "react-router-dom"
 import Index from "../pages/Index"
 import Show from "../pages/Show"
+import Create from "../pages/Create"
 
 function Main(props) {
   const [players, setPlayers] = useState(null)
@@ -38,6 +39,7 @@ function Main(props) {
           element={<Index players={players} createPlayers={createPlayers} />}
         />
         <Route path="/:id" element={<Show players={players} />} />
+        <Route path="/create" element={<Create createPlayers={createPlayers}  />} />
       </Routes>
     </main>
   )
