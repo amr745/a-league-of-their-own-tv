@@ -7,7 +7,7 @@ function Main(props) {
     <main>
       <Routes>
         <Route exact path="/" element={<Index />} />
-        <Route path="/people/:id" element={<Show />} />
+        <Route path="/:id" element={<Show />} />
       </Routes>
     </main>
   )
