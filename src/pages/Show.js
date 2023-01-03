@@ -20,7 +20,7 @@ const updatePlayer = () => {
     <div className="player">
       <h1>{player.name}</h1>
       <h2>{player.position}</h2>
-      <h3>{player.team}</h3>
+      <img src={player.team} alt="Team Logo" />
       <img src={player.image} alt={player.name} />
       <button id="update" onClick={updatePlayer}>
         UPDATE
@@ -28,7 +28,6 @@ const updatePlayer = () => {
       <button id="delete" onClick={removePlayer}>
         DELETE
       </button>
-      
     </div>
   )
 }
