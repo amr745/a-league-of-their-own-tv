@@ -5,13 +5,6 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.old-paper{
-  position:relative;
-  max-width:850px;
-  /* max-height: 300px;
-  max-width: 200px; */
-}
-
 .card {
   position: relative;
   height: 300px;
@@ -19,7 +12,10 @@ body {
   border: 15px rgb(214, 204, 194) solid;
   background-color: rgb(214, 204, 194);
   margin: 20px;
-  /* display:inline-block; */
+  display:inline-block;
+  overflow: hidden;
+  /* z-index: 2; */
+
 }
   .card::before, .card::after {
     content: '';
@@ -30,7 +26,6 @@ body {
     top: 0;
     left: 0;
     z-index: 8;
-    
     border-top: 60px solid rgb(214, 204, 194);
     border-right: 60px solid transparent;
   }
@@ -47,12 +42,10 @@ body {
   .team_logo {
     position: absolute;
     z-index: 15;
-    
-    /* top: 3px;
-    left: 3px; */
-
     height: 60px;
     width: 60px;
+    top: 2px;
+    left: 8px;
   }
   
   .player {
@@ -67,10 +60,8 @@ body {
   
   figcaption {
     position: absolute;
-    bottom: -10px;
+    bottom: 0px;
     right: 0;
-    /* width: 66%;
-    height: 30px; */
     text-align: center;
     font-size: 100%;
     background: rgb(194, 167, 137);
@@ -79,11 +70,55 @@ body {
     color: black;
   }
 
-    figcaption::before, figcaption::after {
-      content: '';
-    }
+  .card-container {
+    position: relative;
+    /* height: 400px;
+    width: 300px; */
+    height: 320px;
+    width: 220px;
+    overflow: hidden;
+    margin: 20px;
+  }
+  
+  .old-paper-overlay {
+    position: absolute;
+    mix-blend-mode:multiply;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 320px;
+    width: 220px;
+    background-image: url(https://i.imgur.com/4rKVgAQ.png);
+    opacity: 0.8;
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  .card-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+  }
 
-    /* .old-paper {
+    /* figcaption::before, figcaption::after {
+      content: '';
+    } */
+
+    /* .overlay{
+      mix-blend-mode:multiply;
+      position:absolute;
+      display:inline-block;
+      left:0;
+      top:0;
+      right:0;
+      bottom:0;
+    } */
+
+        /* .old-paper {
       position: absolute;
       top: 0;
       left: 0;
@@ -92,18 +127,8 @@ body {
       background-image: url('/public/images/old-paper.png');
       z-index: -1;
     } */
-
-    .overlay{
-      mix-blend-mode:multiply;
-      position:absolute;
-      display:inline-block;
-      left:0;
-      top:0;
-      right:0;
-      bottom:0;
-    }
     
-    /* .over-lay img{
+    /* .old-paper img {
      height: 300px;
       width: 200px;
     } */
