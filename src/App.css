@@ -15,8 +15,8 @@ body {
   display:inline-block;
   overflow: hidden;
   /* z-index: 2; */
-
 }
+
   .card::before, .card::after {
     content: '';
   }
@@ -45,10 +45,10 @@ body {
     height: 60px;
     width: 60px;
     top: 2px;
-    left: 8px;
+    left: 2px;
   }
   
-  .player {
+  .playerPic {
     position: absolute;
     top: 0;
     left: 0;
@@ -56,6 +56,8 @@ body {
     height: 296px;
     width: 196px;
     border: 2px rgb(0, 0, 0) solid;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
   }
   
   figcaption {
@@ -72,12 +74,11 @@ body {
 
   .card-container {
     position: relative;
-    /* height: 400px;
-    width: 300px; */
     height: 320px;
     width: 220px;
     overflow: hidden;
     margin: 20px;
+    float: left;
   }
   
   .old-paper-overlay {
@@ -102,6 +103,8 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 1;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr; */
   }
 
     /* figcaption::before, figcaption::after {

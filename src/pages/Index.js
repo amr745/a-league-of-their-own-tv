@@ -10,7 +10,7 @@ function Index(props) {
       <div key={player._id} className="card">
         <Link to={`/players/${player._id}`}>
               <img className="team_logo" src={player.team} alt="team logo"/>
-              <img className="player" src={player.image} alt={player.name} />
+              <img className="playerPic" src={player.image} alt={player.name} />
               <figcaption className="name">{player.name}<br /> {player.position}</figcaption>
             </Link>
           </div>
